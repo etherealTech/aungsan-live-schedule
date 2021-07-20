@@ -11,7 +11,7 @@ const postID = '654432202109918';
   
   const videoSources = await getFBVideo(postID);
   
-  console.log(videoSources):
+  console.log(videoSources)
   
   axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`)
     .then(({ data }) => {
