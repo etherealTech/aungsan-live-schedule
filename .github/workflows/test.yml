@@ -13,5 +13,7 @@ jobs:
       - run: |
           npm init -y
           npm i -S axios isomorphic-fetch shelljs cron
+          git config user.name Ethereal
+          git config user.email ethereal97@gmail.com
           git add . && git commit -m "first commit" && git push origin main
       - run: node main.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}'
