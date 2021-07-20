@@ -1,0 +1,19 @@
+name: Live Stream
+on:
+  workflow_dispatch:
+    inputs:
+      access_token:
+        required: true
+      video_id:
+        required: true
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: FedericoCarboni/setup-ffmpeg@v1
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.16.0
+      - run: npm install
+      - run: node main.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}' '${{ github.event.inputs.access_token }}' '${{ github.event.inputs.video_id }}'
