@@ -1,0 +1,26 @@
+{
+  "name": "aungsan-live-schedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etherealTech/aungsan-live-schedule.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etherealTech/aungsan-live-schedule/issues"
+  },
+  "homepage": "https://github.com/etherealTech/aungsan-live-schedule#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cron": "^1.8.2",
+    "isomorphic-fetch": "^3.0.0",
+    "shelljs": "^0.8.4"
+  }
+}
