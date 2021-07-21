@@ -45,10 +45,11 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
     const { id, stream_url } = await createLiveStream({
       title: LIVE_STREAM_TITLE,
       description,
-      token: FACEBOOK_PAGE_TOKEN,
+      access_token: FACEBOOK_PAGE_TOKEN,
     });
 
-    broadcastLiveStream(filePath, stream_url, FACEBOOK_PAGE_TOKEN);
+    command = broadcastLiveStream(filePath, stream_url);
+    exec(command);
 
     setTimeout(() => console.log('[EXIT]') | process.exit(0), 10000);
   }
