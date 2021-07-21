@@ -18,7 +18,7 @@ module.exports = function generateReadme(page, cron) {
     '',
     '## Today\'s Selection',
     '',
-    '### [' + video.title + '](' + video.link + ')';
+    '### [' + video.title + '](' + video.link + ')',
     '![thumbnail](' + video.image + ')',
     '',
     '| | |',
