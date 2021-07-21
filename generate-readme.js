@@ -8,7 +8,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`)
   .then(({ data }) => {
     generateReadme(data, CRON_SCHEDULE_TIME);
-    pushChanges();
+    pushChanges('.db');
     process.exit(0);
   })
   .catch((err) => {
