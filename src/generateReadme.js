@@ -23,7 +23,7 @@ module.exports = function generateReadme(page, cron) {
     '',
     '| | |',
     '|:---:|---:|',
-    '| ID# | `' + video.id + '` |`,
+    '| ID# | `' + video.id + '` |',
     `| Duration | ${video.duration} |`,
     `| Schedule for | ${schedule.date} ${schedule.time} |`,
     '',
