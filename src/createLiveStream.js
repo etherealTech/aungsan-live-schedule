@@ -11,9 +11,9 @@ module.exports = async function createLiveStream({
     access_token,
     status: 'LIVE_NOW',
     title,
-    description
+    description,
+    fields: 'id,stream_url,video',
   };
   let { data: { id, stream_url } } = await axios.post(url, data);
-  console.log('[FB] ID#%s', id);
-  return { id, stream_url };
+  return { id, stream_url, video };
 };
