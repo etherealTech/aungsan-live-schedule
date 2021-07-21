@@ -63,6 +63,8 @@ function pushChanges(message) {
 }
 
 module.exports = {
+  readDB,
+  reddData,
   getVideo,
   updateVideo,
   pushChanges,
