@@ -4,7 +4,7 @@ const VIDEO_DATA = '../data/videos.json';
 const DATABASE_PATH = '../.db';
 
 function readJSON(path) {
-  let text = reaeFileSync(path, 'utf-8');
+  let text = readFileSync(path, 'utf-8');
   return JSON.parse(text);
 }
 
@@ -23,10 +23,27 @@ function getVideo() {
   if (video === undefined) {
     throw new Error('Undefined index [' + index + '] in variable $videos');
   }
+  video.index = index;
   return video;
-};
+}
 
+function updateVideo() {
+  let video = getVideo();
+  let data = readDB();
+  let log = {
+    index: video.index,
+    title: video.title,
+    duration: video.duration,
+    link: video.link,
+    uptime: process.uptime(),
+    memory: process.memoryUsage(),
+    timestamp: Date.now(),
+  };
+  data.index = video.index + 1;
+  data.logs.push(log);
+}
 
 module.exports = {
   getVideo,
+  updateVideo,
 };
