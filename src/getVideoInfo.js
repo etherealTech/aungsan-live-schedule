@@ -37,12 +37,9 @@ function updateVideo() {
   let data = readDB();
   let log = {
     index: video.index,
-    title: video.title,
-    duration: video.duration,
     link: video.link,
     uptime: process.uptime(),
-    memory: process.memoryUsage(),
-    timestamp: Date.now(),
+    datetime: new Date().toLocaleString('en-US', { timeZone: 'Asia/Yangon' }),
   };
   data.index = video.index + 1;
   data.logs.unshift(log);
