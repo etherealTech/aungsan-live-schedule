@@ -11,7 +11,6 @@ module.exports = function generateReadme(page, cron) {
   let video = getVideo();
   let id = video.link.split('/').pop();
   let schedule = convertToDate(cron);
-  let videos = generateVideoRows();
   let markdown = [
     page.name ? `# [${page.name}](https://fb.me/${page.id})` : '# aungsan-live-schedule',
     '',
@@ -45,8 +44,6 @@ module.exports = function generateReadme(page, cron) {
   
   writeFileSync(README_PATH, markdown.join('\n'), 'utf-8');
   
-  let now = Date.now();
-  
   function convertToDate(cron) {
     let [s, m, h ] = cron.split(' ');
     if (parseInt(m) < 10) {
@@ -66,7 +63,7 @@ module.exports = function generateReadme(page, cron) {
     let data = readData().slice(video.index, video.index + MAX_REVIEW_COUNT);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
-      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(now + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
+      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
       items.push(item);
     }
     return items;
@@ -78,30 +75,10 @@ module.exports = function generateReadme(page, cron) {
     let data = readData().slice(0, video.index - 1);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
-      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(now - i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
+      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() - i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
       items.push(item);
     }
     return items;
-  }
-  
-  function generateVideoRows() {
-    let results = [];
-    let videos = getVideos();
-    let index = videos.findIndex(({ link }) => link === video.id);
-    let now = PER_DAY_VALUE * index;
-    let date = new Date(Date.now() + now);
-    for (let i in videos) {
-      date = new Date(date.getTime() + PER_DAY_VALUE);
-      let { title, duration, image, link } = videos[i];
-      let id = link.split('/').pop();
-      results.push(`| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${date.toLocaleDateString(...DATETIME_OPT)} |`);
-    }
-    return results;
-  }
-  
-  function getVideos() {
-    let i = video.index < MAX_REVIEW_COUNT ? 0 : video.index - MAX_REVIEW_COUNT;
-    return readData().slice(i, i + MAX_REVIEW_COUNT);
   }
 };
 
