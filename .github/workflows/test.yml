@@ -1,6 +1,9 @@
 name: Live Schedule
 on:
   workflow_dispatch:
+    cron_schedule:
+      required: true
+      default: '0 0 19 * * *'
 jobs:
   task:
     runs-on: ubuntu-latest
