@@ -12,7 +12,6 @@ module.exports = function generateReadme(page, cron) {
   let id = video.link.split('/').pop();
   let schedule = convertToDate(cron);
   let videos = generateVideoRows();
-  let index = video.findIndex(({ link }) => link === id);
   let markdown = [
     page.name ? `# [${page.name}](https://fb.me/${page.id})` : '# aungsan-live-schedule',
     '',
@@ -59,6 +58,7 @@ module.exports = function generateReadme(page, cron) {
     let date = new Date(Date.now() + now);
     let results = [];
     let videos = getVideos();
+    let index = videos.findIndex(({ link }) => link === id);
     for (let i in videos) {
       date = new Date(date.getTime() + PER_DAY_VALUE);
       let { title, duration, image, link } = videos[i];
