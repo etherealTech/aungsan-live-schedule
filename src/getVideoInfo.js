@@ -32,7 +32,7 @@ function getVideo() {
   return video;
 }
 
-function updateVideo() {
+function updateVideo(index = 1) {
   let video = getVideo();
   let data = readDB();
   let log = {
@@ -41,7 +41,7 @@ function updateVideo() {
     uptime: process.uptime(),
     datetime: new Date().toLocaleString('en-US', { timeZone: 'Asia/Yangon' }),
   };
-  data.index = video.index + 1;
+  data.index = video.index + index;
   data.logs.unshift(log);
   data.logs = data.logs.slice(0, MAX_LOGGING_SIZE);
   writeFileSync(DATABASE_PATH, JSON.stringify(data), "utf-8");
