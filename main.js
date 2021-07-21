@@ -1,7 +1,7 @@
 const { default: axios } = require('axios');
 const { schedule } = require ('cron');
 const { exec } = require('shelljs');
-const { getVideo } = require('./src/getVideoInfo');
+const { getVideo, updateVideo } = require('./src/getVideoInfo');
 const getFBVideo = require('./src/getFBVideo');
 const createLiveStream = require('./src/createLiveStream');
 const broadcastLiveStream = require('./src/broadcastLiveStream');
@@ -47,6 +47,8 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
       description,
       access_token: FACEBOOK_PAGE_TOKEN,
     });
+
+    updateVideo();
 
     command = broadcastLiveStream(filePath, stream_url);
     exec(command);
