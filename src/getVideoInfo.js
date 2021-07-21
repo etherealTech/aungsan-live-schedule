@@ -1,4 +1,4 @@
-const { resolve, basename } = require('path');
+const { resolve } = require('path');
 const { readFileSync, writeFileSync } = require('fs');
 const { exec } = require('shelljs');
 
@@ -50,11 +50,11 @@ function updateVideo() {
   writeFileSync(DATABASE_PATH, JSON.stringify(data), "utf-8");
 }
 
-function pushChanges(message) {
+function pushChanges(message, tracks = '--all') {
   let command = [
     "git config user.name '" + GIT_AUTHOR_NAME + "'",
     "git config user.email '" + GIT_AUTHOR_EMAIL + "'",
-    "git add " + basename(DATABASE_PATH),
+    "git add " + tracks,
     "git commit -m 'Live Schedule'",
     "git push"
   ].join(";\n");
