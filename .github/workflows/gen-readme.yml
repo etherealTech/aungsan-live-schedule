@@ -16,5 +16,5 @@ jobs:
        with:
          node-version: 14.16.0
      - run: npm install
-     - run: node -generste-readme.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}' '${{ github.event.inputs.cron_schedule }}' 
+     - run: node -generate-readme.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}' '${{ github.event.inputs.cron_schedule }}' 
 
