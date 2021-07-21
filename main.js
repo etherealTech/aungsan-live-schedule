@@ -1,5 +1,5 @@
 const { default: axios } = require('axios');
-const { schedule } = require ('cron');
+const { schedule } = require ('node-cron');
 const { exec } = require('shelljs');
 const { getVideo, updateVideo } = require('./src/getVideoInfo');
 const getFBVideo = require('./src/getFBVideo');
