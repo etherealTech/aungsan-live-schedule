@@ -1,19 +1,21 @@
 # [Ethereal API - Testing](https://fb.me/103302041643161)
 
-generated at 7/22/2021, 1:04:54 AM
+generated at 7/22/2021, 1:29:38 AM
 
 ## Today's Selection
 
-### [အောင်ဆန်းတောရတပ်ဦးကျောင်းတိုက်'s Video](https://www.facebook.com/655653464834259/videos/2741308689229335)
-![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p235x350/56238076_2741315219228682_1201760380888547328_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=UJUI1o9SO7cAX-5nEES&_nc_ht=scontent-sin6-2.xx&oh=d1b4b5328f3fcd52f77d5ba1253dd6f0&oe=60FA75BA)
+### [အောင်ဆန်းတောရတပ်ဦးကျောင်းတိုက်'s Video](https://www.facebook.com/655653464834259/videos/324382018222230)
+![thumbnail](https://scontent-sin6-1.xx.fbcdn.net/v/t15.5256-10/p235x350/56248232_324384661555299_2789812289337819136_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=weAjL1gG-CYAX-RKlsf&_nc_ht=scontent-sin6-1.xx&oh=c254ea9155f64603b2cb1a04ad085d27&oe=60FB673D)
 
 | | |
 |:---:|---:|
-| ID# | `undefined` |
-| Duration | 1:49:16 |
-| Schedule for | 7/22/2021 13:05:005 |
+| ID# | `#324382018222230` |
+| Duration | 2:00:45 |
+| Scheduled | 7/22/2021 1:30:00 |
 
-| Video | Title | Duration | Schedule For |
+## Schedule Table
+
+| Video | Title | Duration | Date |
 |:-----:|:------|---------:|-------------:|
 | ![832875623727158](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p235x350/55895275_832878573726863_3893200584659959808_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=DnfwHRb5fooAX-6UUNi&_nc_ht=scontent-sin6-2.xx&oh=96205d190247c243e2126049e19d61f3&oe=60FA1EEE) | [တရားစခန်းဝင်ယောဂီများအား သြဝါဒတရား](https://www.facebook.com/655653464834259/videos/832875623727158) | 1:12:13 | 7/22/2021 |
 | ![747778098955797](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/p235x350/54493596_747780348955572_438410749539254272_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=C1HhKtAgyIMAX-sVvXV&tn=os14YXKstTHqwWrT&_nc_ht=scontent-sin6-4.xx&oh=74ec6166a2bb7a88c83aa634d729d8d0&oe=60FB1A89) | [ရပ်ကမ္မဋ္ဌာန်းအလုပ်ပေးတရား](https://www.facebook.com/655653464834259/videos/747778098955797) | 33:30 | 7/23/2021 |
