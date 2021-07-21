@@ -30,7 +30,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
   console.log('[INPUT]', text);
   console.log('[DOWNLOADING]', filePath);
 
-  command = `curl -L '${video.source}' -o '${filePath}' --progress-bar`;
+  command = `curl -L '${source}' -o '${filePath}' --progress-bar`;
   exec(command);
 
   console.log('[CRON]', CRON_SCHEDULE_TIME);
