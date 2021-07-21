@@ -8,7 +8,7 @@ const DATETIME_OPT = ['en-US', { timeZone: 'Asia/Yangon' }];
 const PER_DAY_VALUE = 24 * 3600 * 1000; // hour * minute * millisecond
 
 module.exports = function generateReadme(page, cron) {
-  let time = convertToDate(cron);
+  let time = convertToDate();
   let today = new Date().toLocaleDateString(...DATETIME_OPT);
   today = today.split('/');
   today = [today[2], today[0].length === 2 ? today[0] : '0' + today[0], today[1]].join('-');
@@ -47,7 +47,7 @@ module.exports = function generateReadme(page, cron) {
   
   writeFileSync(README_PATH, markdown.join('\n'), 'utf-8');
 
-  function convertToDate(cron) {
+  function convertToDate() {
     let [s, m, h ] = cron.split(' ');
     if (h.length === 1) {
       h = '0' + h;
@@ -67,7 +67,7 @@ module.exports = function generateReadme(page, cron) {
     for (let i in data) {
       let { title, duration, image, link } = data[i];
       let date = new Date(today.getTime() + i * PER_DAY_VALUE);
-      let item = `| ![${id}](${image}) | \`#${id}\` [${title}](${link}) | ${duration} | ${date().toLocaleDateString(...DATETIME_OPT)} |`;
+      let item = `| ![${id}](${image}) | \`#${id}\` [${title}](${link}) | ${duration} | ${date.toLocaleDateString(...DATETIME_OPT)} |`;
       items.push(item);
     }
     return items;
