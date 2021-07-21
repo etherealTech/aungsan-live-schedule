@@ -1,32 +1,50 @@
 # [Ethereal API - Testing](https://www.facebook.com/103302041643161)
 
-> generated at 7/22/2021, 5:22:00 AM
+> generated at 7/22/2021, 5:34:00 AM
 
 ## Today's Selection
 
-### ၂၉.၈.၂၀၁၈ (`1:20:55`)
+### (31-10-2020) ရက်နေ့
+သီတင်းကျွတ်လပြည့် 
+အဘိဓမ္မာအခါတော်နေ့ အထိမ်းအမှတ်အဖြစ်
+ကျေးဇူးတော်ရှင်အောင်ဆန်းဆရာတော်ဘုရားကြီး
+အမှူ းပြုသော သံဃာတော်အရှင်သူမြတ်တို့က
+အသံမစဲမဟာပဋ္ဌာန်းရွတ်ဖတ် ပူဇော်ခြင်း (`36:45`)
 
-![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/p240x240/93380406_307302146906927_8927577475970498560_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=e6soyytDwDgAX_XWEIc&_nc_oc=AQnp0OApUduVE7zxRF43ZJeWc_FuY1hTU0vG_F2C4rgUMKMu6I05rpeh-Uf-tys00Xk&_nc_ht=scontent-sin6-3.xx&oh=efd108e78489c13b11ddb33b52dbef15&oe=60F9D925)
+![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.13418-10/p235x350/121910159_664351274473699_2951678076977493956_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=BNdDvR6d50oAX9k0kkK&_nc_oc=AQlwW2OLuh8DawaEIHr2u6G3xoWPWkjs7WBUdyMWfJYvDx7OsXcnoc7Ily_ieKTYuns&_nc_ht=scontent-sin6-3.xx&oh=629698c1fd7302d3f15d4b1356e0dffb&oe=60F9BC35)
 
-Original Link: [`#307295070240968`](https://www.facebook.com/655653464834259/videos/307295070240968)
+Original Link: [`#357140338700316`](https://www.facebook.com/655653464834259/videos/357140338700316)
 
 ## Upcoming
 
 | Video | Title | Duration | Date |
 |:-----:|:------|---------:|-------------:|
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p240x240/92955563_268358137631285_6493273193229320192_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=FalxRXjtIFkAX_8jjOr&_nc_ht=scontent-sin6-2.xx&oh=0960b09a3d30781103c1dae1de9e77a8&oe=60FA1BF7) | `#268351697631929` [၃၀.၈.၂၀၁၈](https://www.facebook.com/655653464834259/videos/268351697631929) | 1:12:21 | 7/23/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p206x206/93256019_229778204912957_2119882624787808256_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=OTFNkAM3wxoAX_kKN61&_nc_ht=scontent-sin6-2.xx&oh=8f70d3bf3ac9b4ce2b79753081576604&oe=60FA20DE) | `#229773121580132` [၄.၄.၂၀၁၉](https://www.facebook.com/655653464834259/videos/229773121580132) | 1:15:42 | 7/24/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-1.xx.fbcdn.net/v/t15.5256-10/p240x240/93520835_253423322371890_8831074951013335040_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=3DcjLHV7aqUAX-r6Mgb&_nc_ht=scontent-sin6-1.xx&oh=c803ec118cfb5eb7a499d4c29c9ca9a5&oe=60FA6FEA) | `#253417709039118` [၁၄.၄.၂၀၁၃](https://www.facebook.com/655653464834259/videos/253417709039118) | 1:25:41 | 7/25/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p240x240/93811812_219669626005034_5085813196309135360_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=SsafZU2ibzgAX89LiLi&_nc_ht=scontent-sin6-2.xx&oh=ad56403f5ee9aec6f37c5eb784e76847&oe=60F9FED8) | `#219664242672239` [၁၆.၄.၂၀၁၃](https://www.facebook.com/655653464834259/videos/219664242672239) | 1:13:39 | 7/26/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/p240x240/94379434_2670463529745892_285609329409654784_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=ujqXj5Cl-gwAX_GnDmx&_nc_ht=scontent-sin6-4.xx&oh=70fe2c981f7f3b11077630860d929453&oe=60FB76A9) | `#2670442339748011` [၁၇.၄.၂၀၁၃](https://www.facebook.com/655653464834259/videos/2670442339748011) | 1:23:55 | 7/27/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p240x240/93432175_235229174495059_6969085175112138752_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=K9y_B2lQJmAAX-y_j85&_nc_ht=scontent-sin6-2.xx&oh=31584d6355c970a5385f1ca34b86b834&oe=60FA7EFB) | `#235218071162836` [၁၈.၄.၂၀၁၃](https://www.facebook.com/655653464834259/videos/235218071162836) | 1:27:38 | 7/28/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/p240x240/94764020_219344185989669_1814227420287336448_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=GHbM2PHTWWEAX9TAdAh&_nc_oc=AQlOu-354FV0Y3OSlS2Far2jMy5__WQ-VeN1Wp03iqqSslaa_wAog20pjBtqpEj_Ko8&_nc_ht=scontent-sin6-3.xx&oh=98214912ab6f243c149fd1abe6da9ac6&oe=60FB3EC7) | `#219339489323472` [၁၉.၄.၂၀၁၃](https://www.facebook.com/655653464834259/videos/219339489323472) | 1:11:23 | 7/29/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/94176878_656012828527809_4412397053401890816_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=d92mqF-65YwAX9ZsziC&_nc_ht=scontent-sin6-3.xx&oh=fcfcfd49db745181d98622bdda641428&oe=60FB88CB) | `#656008175194941` [၂၅.၆.၂၀၁၃](https://www.facebook.com/655653464834259/videos/656008175194941) | 51:38 | 7/30/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/94367005_549507808957260_6819098771037618176_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=_9x7JWrYlUEAX9UjX6r&_nc_ht=scontent-sin6-3.xx&oh=22946aad9b53e2bef2032859c49ffcd9&oe=60FB2B0A) | `#549502985624409` [၃၀.၆.၂၀၁၃](https://www.facebook.com/655653464834259/videos/549502985624409) | 1:18:26 | 7/31/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-1.xx.fbcdn.net/v/t15.5256-10/p240x240/93890599_643970909669045_5183312561700864000_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=UVvI9B46z0EAX8m1kox&_nc_ht=scontent-sin6-1.xx&oh=ef150d1534f8e475b6c80dbc01014a38&oe=60FA57F9) | `#643965409669595` [၂၆.၁၂.၂၀၁၃](https://www.facebook.com/655653464834259/videos/643965409669595) | 1:35:16 | 8/1/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p370x247/94894893_3019310174799995_5708727537497014272_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=qizsoprBONEAX88NPEj&tn=os14YXKstTHqwWrT&_nc_ht=scontent-sin6-2.xx&oh=0ea3c9e729b87172475c8fd36ecf999e&oe=60FAC981) | `#3019270518137294` [၅.၁၂.၂၀၁၄](https://www.facebook.com/655653464834259/videos/3019270518137294) | 2:31:08 | 8/2/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p240x240/94894908_544504399827187_5940270796382404608_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=v-lMfqGUtgcAX-6WgHd&_nc_oc=AQldpRsovVNfeaXq5AnsYrck3oDmsfdV5eodH2YWm6PMrOCUMdQ4hRXDrEl08FkbCVA&tn=os14YXKstTHqwWrT&_nc_ht=scontent-sin6-2.xx&oh=4bccbe1137672a7c1667acd2b0fcf2a1&oe=60FB6FF0) | `#544491196495174` [၁၉.၉.၂၀၁၉](https://www.facebook.com/655653464834259/videos/544491196495174) | 1:33:10 | 8/3/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/p240x240/95065862_686864672110808_2118918847011487744_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=npCIR-4DMQkAX_Z2EWh&_nc_oc=AQnJxJWr9YWWcLEPndZFSIc_5eo9FlkhiLsGernAk4gEkSibXUamO0RdEij-RsmPiCE&_nc_ht=scontent-sin6-4.xx&oh=7bf692b75d49bade7625b1cfbcc4fbcd&oe=60FA29AC) | `#686854965445112` [၂၀.၉.၂၀၁၉](https://www.facebook.com/655653464834259/videos/686854965445112) | 1:30:23 | 8/4/2021, 5:22:00 AM |
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p240x240/94910269_1140639929628640_6306287368181645312_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=jiU4PUjjrjkAX8kUQ7Z&_nc_ht=scontent-sin6-2.xx&oh=56ef2f31a8598d7643e993a0fa3d8c6e&oe=60FB07F5) | `#1140624329630200` [၂၁.၉.၂၀၁၉](https://www.facebook.com/655653464834259/videos/1140624329630200) | 1:56:40 | 8/5/2021, 5:22:00 AM |
+| ![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.13418-10/p235x350/121893542_381790829619543_4457673216886628143_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=xzmSBtYS2nwAX_sPJF3&_nc_ht=scontent-sin6-4.xx&oh=5a455cfcea3c848179e767bee97b5615&oe=60F9E2A2) | `#746017169333423` [သီတင်းကျွတ်လပြည့် 
+အဘိဓမ္မာအခါတော်နေ့ အထိမ်းအမှတ်အဖြစ်
+ကျေးဇူးတော်ရှင်အောင်ဆန်းဆရာတော်ဘုရားကြီး
+အမှူ းပြုသော သံဃာတော်အရှင်သူမြတ်တို့က
+အသံမစဲမဟာပဋ္ဌာန်းရွတ်ဖတ် ပူဇော်ခြင်း](https://www.facebook.com/655653464834259/videos/746017169333423) | 33:51 | 7/23/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/121855882_1041180836330095_4809581992780361822_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=pDt13ocY2s0AX-Pwbb9&tn=os14YXKstTHqwWrT&_nc_ht=scontent-sin6-3.xx&oh=9709c073d562a78f4a489314ec343ce8&oe=60F9E6D5) | `#1041176509663861` [(25-4-2013) PM](https://www.facebook.com/655653464834259/videos/1041176509663861) | 52:45 | 7/24/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.13418-10/p235x350/121778065_430401527943072_1402494700425209641_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=Pv740KCAobYAX9Iw8_c&_nc_ht=scontent-sin6-3.xx&oh=ae7dea9b051452b9619cf9d5bca09b05&oe=60FA63C5) | `#3598065220232914` [သီတင်းကျွတ်လပြည့် 
+အဘိဓမ္မာအခါတော်နေ့ အထိမ်းအမှတ်အဖြစ်
+ကျေးဇူးတော်ရှင်အောင်ဆန်းဆရာတော်ဘုရားကြီး မှ
+အသံမစဲမဟာပဋ္ဌာန်းရွတ်ဖတ် ပူဇော်ခြင်း](https://www.facebook.com/655653464834259/videos/3598065220232914) | 57:56 | 7/25/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.13418-10/p235x350/121926707_1055903638183100_3601939515761907430_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=w8MrXgWXxCcAX-yxVHv&_nc_ht=scontent-sin6-2.xx&oh=d6955fca9a637ffe500bf35ac8db1e52&oe=60FB022E) | `#688973758697568` [သီတင်းကျွတ်လပြည့် 
+အဘိဓမ္မာအခါတော်နေ့ အထိမ်းအမှတ်အဖြစ်
+ကျေးဇူးတော်ရှင်အောင်ဆန်းဆရာတော်ဘုရားကြီး
+အမှူ းပြုသော သံဃာတော်အရှင်သူမြတ်တို့က
+အသံမစဲမဟာပဋ္ဌာန်းရွတ်ဖတ် ပူဇော်ခြင်း
+
+ပဋ္ဌာန်းသိမ်းအောင်ပွဲ တိုက်ရိုက် Live](https://www.facebook.com/655653464834259/videos/688973758697568) | 1:39:45 | 7/26/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/121836359_806758943441874_6063748157565475231_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=d-KlkQYr3oYAX_0SxuN&_nc_ht=scontent-sin6-3.xx&oh=5393dead20b7ea5b83e426b3ccd4e8a8&oe=60FAABC1) | `#806752246775877` [(26-4-2013) AM](https://www.facebook.com/655653464834259/videos/806752246775877) | 1:09:05 | 7/27/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/121914398_710502963151190_3154231356406212263_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=-W6TcX-Od_AAX9tSKrO&_nc_ht=scontent-sin6-3.xx&oh=c64e793bfaa491fd1b126aed52ab0dd7&oe=60FA0424) | `#710495559818597` [(26-4-2013) PM](https://www.facebook.com/655653464834259/videos/710495559818597) | 1:13:07 | 7/28/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/121915214_362331768194154_8539933828240053488_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=sr6oZnGN5LwAX95P4VT&tn=os14YXKstTHqwWrT&_nc_ht=scontent-sin6-2.xx&oh=34626382d85d8e0ee09c5da1ccf186d6&oe=60F9C632) | `#362325464861451` [(23-5-2012) PM](https://www.facebook.com/655653464834259/videos/362325464861451) | 1:07:38 | 7/29/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/121917097_849107042560718_6231313385009371051_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=sImIL8EM7C4AX8Htw14&_nc_ht=scontent-sin6-2.xx&oh=2efda95071814e8ddc0ba0030914f3d7&oe=60FAB74B) | `#849101665894589` [(24-5-2012) PM](https://www.facebook.com/655653464834259/videos/849101665894589) | 1:20:17 | 7/30/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/121896054_1071771019938513_7220165293881938956_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=LIE8M-_Tu0sAX-4_U2T&tn=os14YXKstTHqwWrT&_nc_ht=scontent-sin6-4.xx&oh=fcf287522f43c43d76f3969eb6d76d7a&oe=60FA2158) | `#1071764223272526` [(25-5-2012) AM](https://www.facebook.com/655653464834259/videos/1071764223272526) | 53:27 | 7/31/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/121900087_660452904664039_189197618883896955_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=LEWUlMkjWIQAX-vLjkU&_nc_ht=scontent-sin6-4.xx&oh=6f817b3b13dbed3ffe06872cb2eecf42&oe=60FA3037) | `#660446891331307` [(25-5-2012) PM](https://www.facebook.com/655653464834259/videos/660446891331307) | 1:09:58 | 8/1/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/121856043_1087191185034074_4347557119285588697_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=zZE5kEkf5CsAX_cYJ19&_nc_oc=AQlXZOM8h0BL5MzSnmgzmCo4fWS4WyCYaJPMFMUCtOm3pL01ujcN5te1vsR-RnbQYEs&_nc_ht=scontent-sin6-3.xx&oh=5851edcf376b1440108275d3038c128e&oe=60FACA03) | `#1087186318367894` [(26-5-2012) AM](https://www.facebook.com/655653464834259/videos/1087186318367894) | 58:38 | 8/2/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/121857923_654440765442395_1021779604275428046_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=K9HizOFocboAX_ScXur&_nc_ht=scontent-sin6-4.xx&oh=7ada74ee7ba4212a9f32e47f88c452f4&oe=60FB03DA) | `#654432202109918` [(26-5-2012) PM](https://www.facebook.com/655653464834259/videos/654432202109918) | 1:13:33 | 8/3/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/121922438_2822964431321306_1371895640067960544_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=UD--FWZARP8AX_fknXN&_nc_oc=AQmrEhinIfi3n47GeEZy6YdK6evzY9XMgzwqLhOnVtZl7JXx-mkQGygxco16nxfFNZA&_nc_ht=scontent-sin6-3.xx&oh=cfe2fcb093fa698eda5c346ceff5eb08&oe=60FA049C) | `#2822957877988628` [(27-5-2012) AM](https://www.facebook.com/655653464834259/videos/2822957877988628) | 58:10 | 8/4/2021, 5:34:00 AM |
+| ![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/121929287_1286596071674500_1091650702464022340_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=OgAwNMz3VMcAX80e15s&_nc_ht=scontent-sin6-4.xx&oh=247d34fc5cc2139c6c01fd4ea2644787&oe=60FB795E) | `#1286579028342871` [(27-5-2012) PM](https://www.facebook.com/655653464834259/videos/1286579028342871) | 1:21:59 | 8/5/2021, 5:34:00 AM |
 
 _&copy; 2021-2021 [Ethereal](https://github.com/etherealtech)_
