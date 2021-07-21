@@ -54,11 +54,11 @@ module.exports = function generateReadme(page, cron) {
   }
   
   function generateVideoRows() {
-    let now = PER_DAY_VALUE * index;
-    let date = new Date(Date.now() + now);
     let results = [];
     let videos = getVideos();
-    let index = videos.findIndex(({ link }) => link === id);
+    let index = videos.findIndex(({ link }) => link === video.id);
+    let now = PER_DAY_VALUE * index;
+    let date = new Date(Date.now() + now);
     for (let i in videos) {
       date = new Date(date.getTime() + PER_DAY_VALUE);
       let { title, duration, image, link } = videos[i];
