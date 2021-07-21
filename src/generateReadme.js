@@ -54,7 +54,7 @@ module.exports = function generateReadme(page, cron) {
     };
   }
   
-  function generateVideoRow() {
+  function generateVideoRows() {
     let now = PER_DAY_VALUE * index;
     let date = new Date(Date.now() + now);
     let results = [];
