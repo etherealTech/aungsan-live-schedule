@@ -60,10 +60,10 @@ module.exports = function generateReadme(page, cron) {
     
   function createUpcoming() {
     let items = [];
-    let data = readData().slice(video.index, video.index + MAX_REVIEW_COUNT);
+    let data = readData().slice(video.index + 1, video.index + MAX_REVIEW_COUNT);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
-      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
+      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() + ((i + 1) * PER_DAY_VALUE)).toLocaleDateString(...DATETIME_OPT)} |`;
       items.push(item);
     }
     return items;
@@ -75,7 +75,7 @@ module.exports = function generateReadme(page, cron) {
     let data = readData().slice(0, video.index - 1);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
-      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() - i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
+      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() - ((i + 1) * PER_DAY_VALUE)).toLocaleDateString(...DATETIME_OPT)} |`;
       items.push(item);
     }
     return items;
