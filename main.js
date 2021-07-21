@@ -46,9 +46,9 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
   async function onAir() {
     now('ONAIR');
 
-    const description =  (video.title || LIVE_STREAM_TITLE).split('ago')[0].slice(0, -5);
+    const description =  video.title || LIVE_STREAM_TITLE;
     const { id, stream_url } = await createLiveStream({
-      title: LIVE_STREAM_TITLE,
+      title: LIVE_STREAM_TITLE + ' ' + id,
       description,
       access_token: FACEBOOK_PAGE_TOKEN,
     });
