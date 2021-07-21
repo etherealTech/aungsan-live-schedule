@@ -1,7 +1,7 @@
 const { readFileSync, writeFileSync } = require('fs');
 
 const VIDEO_DATA = '../data/videos.json';
-const DATABASE_PATH = '../.db.json';
+const DATABASE_PATH = '../.db';
 
 function readJSON(path) {
   let text = reaeFileSync(path, 'utf-8');
