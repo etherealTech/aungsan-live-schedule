@@ -15,7 +15,7 @@ module.exports = function generateReadme(page, cron) {
   let markdown = [
     page.name ? `# [${page.name}](https://fb.me/${page.id})` : '# aungsan-live-schedule',
     '',
-    `generated at ${new Date().toLocaleString(...DATETIME_OPT)}`,
+    `> generated at ${new Date().toLocaleString(...DATETIME_OPT)}`,
     '',
     '## Today\'s Selection',
     '',
@@ -23,21 +23,29 @@ module.exports = function generateReadme(page, cron) {
     '![thumbnail](' + video.image + ')',
     '',
     '| | |',
-    '|:---:|---:|',
-    '| ID# | `#' + id + '` |',
+    '|:--:|:---:|',
     `| Duration | ${video.duration} |`,
-    `| Scheduled | ${schedule.date} ${schedule.time} |`,
+    `| Local time | ${schedule.time} |`,
+    `| Local date | ${schedule.date} |`,
     '',
-    '## Schedule Table',
+    '## Upcoming Schedule',
     '',
     '| Video | Title | Duration | Date |',
     '|:-----:|:------|---------:|-------------:|',
-    ...videos,
+    ...createUpcoming(),
     '',
-    '> &copy; 2021-' + new Date().getFullYear() + ' [Ethereal](https://github.com/etherealtech)',
+    '## Previous Broadcast',
+    '',
+    '| Video | Title | Duration | Date |',
+    '|:-----:|:------|---------:|-------------:|',
+    ...createPrevious(),
+    '',
+    '_&copy; 2021-' + new Date().getFullYear() + ' [Ethereal](https://github.com/etherealtech)_',
   ];
   
   writeFileSync(README_PATH, markdown.join('\n'), 'utf-8');
+  
+  let now = Date.now();
   
   function convertToDate(cron) {
     let [s, m, h ] = cron.split(' ');
@@ -51,6 +59,29 @@ module.exports = function generateReadme(page, cron) {
       date: new Date().toLocaleDateString(...DATETIME_OPT),
       time: `${h}:${m}:${s}`,
     };
+  }
+    
+  function createUpcoming() {
+    let items = [];
+    let data = readData().slice(video.index, video.index + MAX_REVIEW_CONUT);
+    for (let i in data) {
+      let { title, duration, image, link } = data[i];
+      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(now + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
+      items.push(item);
+    }
+    return items;
+  }
+  
+  function createPrevious() {
+    let items = [];
+    let index = video.index < MAX_REVIEW_COUNT ? 0 : video.index - MAX_REVIEW_COUNT;
+    let data = readData().slice(0, video.index - 1);
+    for (let i in data) {
+      let { title, duration, image, link } = data[i];
+      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(now - i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
+      items.push(item);
+    }
+    return items;
   }
   
   function generateVideoRows() {
