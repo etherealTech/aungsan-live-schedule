@@ -40,7 +40,7 @@ module.exports = function generateReadme(page, cron) {
 //    '',
 //    '| Video | Title | Duration | Date |',
 //    '|:-----:|:------|---------:|-------------:|',
-/   ...createPrevious(),
+//   ...createPrevious(),
 //    '',
     '_&copy; 2021-' + new Date().getFullYear() + ' [Ethereal](https://github.com/etherealtech)_',
   ];
