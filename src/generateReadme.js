@@ -63,7 +63,7 @@ module.exports = function generateReadme(page, cron) {
     
   function createUpcoming() {
     let items = [];
-    let data = readData().slice(video.index, video.index + MAX_REVIEW_CONUT);
+    let data = readData().slice(video.index, video.index + MAX_REVIEW_COUNT);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
       let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(now + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT)} |`;
