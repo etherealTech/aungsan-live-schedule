@@ -42,7 +42,6 @@ function updateVideo() {
   };
   data.index = video.index + 1;
   data.logs.push(log);
-  writeFileSync(DATABASE_PATH, JSON.stringify(data), 'utf-8');
 }
 
 module.exports = {
