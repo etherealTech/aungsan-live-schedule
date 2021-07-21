@@ -80,6 +80,7 @@ module.exports = function generateReadme(page, cron) {
     let data = readData().slice(0, video.index - 1);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
+      title = title.replace(/\|/gm/, '-');
       let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() - ((i + 1) * PER_DAY_VALUE)).toLocaleDateString(...DATETIME_OPT)} |`;
       items.push(item);
     }
