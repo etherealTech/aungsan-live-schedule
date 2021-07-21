@@ -2,7 +2,7 @@ const { resolve } = require('path');
 const { writeFileSync } = require('fs');
 const { readDB, readData, getVideo } = require('./getVideoInfo.js');
 
-const MAX_REVIEW_COUNT = 20;
+const MAX_REVIEW_COUNT = 14;
 const README_PATH = resolve(__dirname, '../README.md');
 const DATETIME_OPT = ['en-US', { timeZone: 'Asia/Yangon' }];
 const PER_DAY_VALUE = 24 * 3600 * 1000; // hour * minute * millisecond
@@ -63,14 +63,15 @@ module.exports = function generateReadme(page, cron) {
     
   function createUpcoming() {
     let items = [];
-    let data = readData().slice(video.index, video.index + MAX_REVIEW_COUNT);
+    let data = readData().slice(video.index, video.index + MAX_REVIEW_COUNT + 1);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
+      let id = link.split('/').pop();
       let date = new Date(today.getTime() + i * PER_DAY_VALUE);
-      let item = `| ![${id}](${image}) | \`#${id}\` [${title}](${link}) | ${duration} | ${date.toLocaleDateString(...DATETIME_OPT)} |`;
+      let item = `| ![thumbnail](${image}) | \`#${id}\` [${title}](${link}) | ${duration} | ${date.toLocaleString(...DATETIME_OPT)} |`;
       items.push(item);
     }
-    return items;
+    return items.slice(1);
   }
   
   function createPrevious() {
