@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 const { readFileSync, writeFileSync } = require('fs');
 
-const VIDEO_DATA = resolve(__dirname, '../data/videos.json';
+const VIDEO_DATA = resolve(__dirname, '../data/videos.json');
 const DATABASE_PATH = resolve(__dirname, '../.db');
 
 function readJSON(path) {
