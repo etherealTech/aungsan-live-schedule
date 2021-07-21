@@ -6,8 +6,8 @@ const getFBVideo = require('./src/getFBVideo');
 const createLiveStream = require('./src/createLiveStream');
 const broadcastLiveStream = require('./src/broadcastLiveStream');
 
-const LIVE_STREAM_TITLE = 'တရား‌‌ေတာ်':
-const CRON_SCHEDULE_TIME = '0 0 19 * * *'; // every night at local time 7PM
+const LIVE_STREAM_TITLE = 'တရား‌‌ေတာ်';
+const CRON_SCHEDULE_TIME = '0 0 19 * * *'; // every night at local time 7PM';
 const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
 !async function () {
