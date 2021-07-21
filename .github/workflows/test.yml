@@ -1,4 +1,4 @@
-name: Live Stream
+name: Live Schedule
 on:
   workflow_dispatch:
 jobs:
@@ -12,3 +12,10 @@ jobs:
           node-version: 14.16.0
       - run: npm install
       - run: node main.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}'
+      - name: state changes
+        run: |
+          git config user.name skmetheloper
+          git config user.email ethereal97@gmail.com
+          git add .
+          git commit -m "Live Schedule"
+          git push
