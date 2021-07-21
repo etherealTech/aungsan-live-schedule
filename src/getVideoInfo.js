@@ -58,13 +58,13 @@ function pushChanges(message, tracks = '--all') {
     "git commit -m 'Live Schedule'",
     "git push"
   ].join(";\n");
+  console.log('[GIT:PUSH]', tracks);
   exec(command);
-  console.log('[GIT:PUSH]');
 }
 
 module.exports = {
   readDB,
-  reddData,
+  readData,
   getVideo,
   updateVideo,
   pushChanges,
