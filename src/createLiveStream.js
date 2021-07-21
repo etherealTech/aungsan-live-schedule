@@ -7,13 +7,12 @@ module.exports = async function createLiveStream({
   access_token
 }) { 
   let url = `${FACEBOOK_GRAPH_URL}/me/live_videos`;
-  let data = {
+  let { data } = await axios.post(url, {
     access_token,
     status: 'LIVE_NOW',
     title,
     description,
     fields: 'id,stream_url,video',
-  };
-  let { data: { id, stream_url } } = await axios.post(url, data);
-  return { id, stream_url, video };
+  });
+  return data;
 };
