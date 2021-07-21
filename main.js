@@ -61,5 +61,5 @@ function now(message) {
   let opt = {
     timeZone: 'Asia/Yangon'
   };
-  console.log('[' + message + ']', date.toLocaleString('en-US', opt);
+  console.log('[' + message + ']', date.toLocaleString('en-US', opt));
 }
