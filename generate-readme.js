@@ -5,8 +5,13 @@ const { default: axios } = require("axios");
 const CRON_SCHEDULE_TIME = process.argv[3];
 const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
-!async function() {
-  const { data } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
-  generateReadme(data, CRON_SCHEDULE_TIME);
-  pushChanges();
-}();
+axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`)
+  .then(({ data }) => {
+    generateReadme(data, CRON_SCHEDULE_TIME);
+    pushChanges();
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.error('[ERROR]', err);
+    process.exit(1);
+  });
