@@ -18,12 +18,12 @@ module.exports = function generateReadme(page, cron) {
     '',
     '## Today\'s Selection',
     '',
-    '!![thumbnail](' + video.image + ')',
+    '### [' + video.title + '](' + video.link + ')';
+    '![thumbnail](' + video.image + ')',
     '',
     '| | |',
     '|:---:|---:|',
-    '| ID | ' + '`#[' + id + '](' + video.link +') |',
-    `| Title | ${video.title} |`,
+    '| ID# | `' + video.id + '` |`,
     `| Duration | ${video.duration} |`,
     `| Schedule for | ${schedule.date} ${schedule.time} |`,
     '',
@@ -38,20 +38,27 @@ module.exports = function generateReadme(page, cron) {
   
   function convertToDate(cron) {
     let [s, m, h ] = cron.split(' ');
+    if (parseInt(m) < 10) {
+      m = '0' + m;
+    }
+    if (parseInt(s) < 10) {
+      s = '0' + m;
+    }
     return {
       date: new Date().toLocaleDateString(...DATETIME_OPT),
       time: `${h}:${m}:${s}`,
     };
   }
   
-  function generateVideoRow(prev) {
+  function generateVideoRow() {
+    let now = new Date();
     let results = [];
     let videos = getVideos();
     for (let i in videos) {
-      let date = new Date(prev * (i * PER_DAY_VALUE)).getTime();
+      let date = new Date(now.getTime() + (i * PER_DAY_VALUE));
       let { title, duration, image, link } = videos[i];
       let id = link.split('/').pop();
-      results.push(`| !![${id}](${image}) | [${title}](${link}) | ${duration} | ${date.toLocaleString(...DATETIME_OPT)} |`);
+      results.push(`| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${date.toLocaleDateString(...DATETIME_OPT)} |`);
     }
     return results;
   }
