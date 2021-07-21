@@ -1,6 +1,6 @@
 const { resolve } = require('path');
 const { writeFileSync } = require('fs');
-const { readData, getVideo } = require('./getVideoInfo.js');
+const { readDB, readData, getVideo } = require('./getVideoInfo.js');
 
 const MAX_REVIEW_COUNT = 20;
 const README_PATH = resolve(__dirname, '../README.md');
@@ -8,62 +8,66 @@ const DATETIME_OPT = ['en-US', { timeZone: 'Asia/Yangon' }];
 const PER_DAY_VALUE = 24 * 3600 * 1000; // hour * minute * millisecond
 
 module.exports = function generateReadme(page, cron) {
+  let time = convertToDate(cron);
+  let today = new Date().toLocaleDateString(...DATETIME_OPT);
+  today = today.split('/');
+  today = [today[2], today[0].length === 2 ? today[0] : '0' + today[0], today[1]].join('-');
+  today = new Date(`${today} ${time} GMT+6:30`);
+ 
   let video = getVideo();
   let id = video.link.split('/').pop();
-  let schedule = convertToDate(cron);
+
   let markdown = [
     page.name ? `# [${page.name}](https://www.facebook.com/${page.id})` : '# aungsan-live-schedule',
     '',
-    `> generated at ${new Date().toLocaleString(...DATETIME_OPT)}`,
+    `> generated at ${today.toLocaleString(...DATETIME_OPT)}`,
     '',
     '## Today\'s Selection',
     '',
-    '### [' + video.title + '](' + video.link + ')',
+    '### ' + video.title + ' (`' + video.duration + '`)',
+    '',
     '![thumbnail](' + video.image + ')',
     '',
-    '| | |',
-    '|:--:|:---:|',
-    `| Duration | ${video.duration} |`,
-    `| Local time | ${schedule.time} |`,
-    `| Local date | ${schedule.date} |`,
+    'Original Link: [`#' + id +'`](' + video.link + ')',
     '',
-    '## Upcoming Schedule',
+    '## Upcoming',
     '',
     '| Video | Title | Duration | Date |',
     '|:-----:|:------|---------:|-------------:|',
     ...createUpcoming(),
     '',
-    '## Previous Broadcast',
-    '',
-    '| Video | Title | Duration | Date |',
-    '|:-----:|:------|---------:|-------------:|',
-    ...createPrevious(),
-    '',
+//    '## Previous Broadcast',
+//    '',
+//    '| Video | Title | Duration | Date |',
+//    '|:-----:|:------|---------:|-------------:|',
+/   ...createPrevious(),
+//    '',
     '_&copy; 2021-' + new Date().getFullYear() + ' [Ethereal](https://github.com/etherealtech)_',
   ];
   
   writeFileSync(README_PATH, markdown.join('\n'), 'utf-8');
-  
+
   function convertToDate(cron) {
     let [s, m, h ] = cron.split(' ');
-    if (parseInt(m) < 10) {
+    if (h.length === 1) {
+      h = '0' + h;
+    }
+    if (m.length === 1) {
       m = '0' + m;
     }
-    if (parseInt(s) < 10) {
+    if (s.length === 1) {
       s = '0' + s;
     }
-    return {
-      date: new Date().toLocaleDateString(...DATETIME_OPT),
-      time: `${h}:${m}:${s}`,
-    };
+    return `${h}:${m}:${s}`;
   }
     
   function createUpcoming() {
     let items = [];
-    let data = readData().slice(video.index + 1, video.index + MAX_REVIEW_COUNT);
+    let data = readData().slice(video.index, video.index + MAX_REVIEW_COUNT);
     for (let i in data) {
       let { title, duration, image, link } = data[i];
-      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() + ((i + 1) * PER_DAY_VALUE)).toLocaleDateString(...DATETIME_OPT)} |`;
+      let date = new Date(today.getTime() + i * PER_DAY_VALUE);
+      let item = `| ![${id}](${image}) | \`#${id}\` [${title}](${link}) | ${duration} | ${date().toLocaleDateString(...DATETIME_OPT)} |`;
       items.push(item);
     }
     return items;
