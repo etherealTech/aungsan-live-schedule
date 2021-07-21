@@ -5,8 +5,9 @@ const { getVideo, updateVideo, pushChanges } = require('./src/getVideoInfo');
 const getFBVideo = require('./src/getFBVideo');
 const createLiveStream = require('./src/createLiveStream');
 const broadcastLiveStream = require('./src/broadcastLiveStream');
+const generateReadme = require('./src/generateReadme');
 
-const LIVE_STREAM_TITLE = 'တရား‌‌ေတာ်';
+const LIVE_STREAM_TITLE = 'တရားတော်';
 const CRON_SCHEDULE_TIME = process.argv[3];
 const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
@@ -18,8 +19,8 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
   const id = video.link.split('/').pop();
   const duration = video.length;
 
-  const { data: currentAuth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
-  console.log('[AUTH]', currentAuth);
+  const { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
+  console.log('[AUTH]', auth);
 
   const sources = await getFBVideo(id);
   const { source, text } = sources.filter(source => !(source.text || '').includes('Audio')).pop();
@@ -38,6 +39,10 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
     timezone: 'Asia/Rangoon',
   });
 
+  generateReadme(auth, CRON_SCHEDULE_TIME);
+  updateVideo();
+  pushChanges();
+
   async function onAir() {
     now('ONAIR');
 
@@ -47,10 +52,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
       description,
       access_token: FACEBOOK_PAGE_TOKEN,
     });
-
-    updateVideo();
-    pushChanges();
-
+    
     command = broadcastLiveStream(filePath, stream_url);
     exec(command);
 
