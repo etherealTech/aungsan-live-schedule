@@ -12,7 +12,7 @@ module.exports = function generateReadme(page, cron) {
   let id = video.link.split('/').pop();
   let schedule = convertToDate(cron);
   let markdown = [
-    page.name ? `# [${page.name}](https://fb.me/${page.id})` : '# aungsan-live-schedule',
+    page.name ? `# [${page.name}](https://www.facebook.com/${page.id})` : '# aungsan-live-schedule',
     '',
     `> generated at ${new Date().toLocaleString(...DATETIME_OPT)}`,
     '',
