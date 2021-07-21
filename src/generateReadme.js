@@ -11,6 +11,8 @@ module.exports = function generateReadme(page, cron) {
   let video = getVideo();
   let id = video.link.split('/').pop();
   let schedule = convertToDate(cron);
+  let videos = generateVideoRows();
+  let index = video.findIndex(({ link }) => link === id);
   let markdown = [
     page.name ? `# [${page.name}](https://fb.me/${page.id})` : '# aungsan-live-schedule',
     '',
@@ -23,13 +25,15 @@ module.exports = function generateReadme(page, cron) {
     '',
     '| | |',
     '|:---:|---:|',
-    '| ID# | `' + video.id + '` |',
+    '| ID# | `#' + id + '` |',
     `| Duration | ${video.duration} |`,
-    `| Schedule for | ${schedule.date} ${schedule.time} |`,
+    `| Scheduled | ${schedule.date} ${schedule.time} |`,
     '',
-    '| Video | Title | Duration | Schedule For |',
+    '## Schedule Table',
+    '',
+    '| Video | Title | Duration | Date |',
     '|:-----:|:------|---------:|-------------:|',
-    ...generateVideoRow(Date.now()),
+    ...videos,
     '',
     '> &copy; 2021-' + new Date().getFullYear() + ' [Ethereal](https://github.com/etherealtech)',
   ];
@@ -42,7 +46,7 @@ module.exports = function generateReadme(page, cron) {
       m = '0' + m;
     }
     if (parseInt(s) < 10) {
-      s = '0' + m;
+      s = '0' + s;
     }
     return {
       date: new Date().toLocaleDateString(...DATETIME_OPT),
@@ -51,11 +55,12 @@ module.exports = function generateReadme(page, cron) {
   }
   
   function generateVideoRow() {
-    let now = new Date();
+    let now = PER_DAY_VALUE * index;
+    let date = new Date(Date.now() + now);
     let results = [];
     let videos = getVideos();
     for (let i in videos) {
-      let date = new Date(now.getTime() + (i * PER_DAY_VALUE));
+      date = new Date(date.getTime() + PER_DAY_VALUE);
       let { title, duration, image, link } = videos[i];
       let id = link.split('/').pop();
       results.push(`| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${date.toLocaleDateString(...DATETIME_OPT)} |`);
