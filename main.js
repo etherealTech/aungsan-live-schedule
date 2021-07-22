@@ -45,18 +45,22 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
   async function onAir() {
     now('ONAIR');
+    try {
+      const description =  video.title || LIVE_STREAM_TITLE;
+      const { id, stream_url } = await createLiveStream({
+        title: LIVE_STREAM_TITLE + ' #' + video_id,
+        description,
+        access_token: FACEBOOK_PAGE_TOKEN,
+      });
 
-    const description =  video.title || LIVE_STREAM_TITLE;
-    const { id, stream_url } = await createLiveStream({
-      title: LIVE_STREAM_TITLE + ' #' + video_id,
-      description,
-      access_token: FACEBOOK_PAGE_TOKEN,
-    });
-    
-    command = broadcastLiveStream(filePath, stream_url);
-    exec(command);
+      command = broadcastLiveStream(filePath, stream_url);
+      exec(command);
 
-    setTimeout(() => console.log('[EXIT]') | process.exit(0), 5000);
+      setTimeout(() => console.log('[EXIT]') | process.exit(0), 5000);
+    } catch(e) {
+      console.error(e);
+      process.exit(1);
+    }
   }
 }().catch((err) => console.error('[ERROR]', err) | process.exit(1));
 
