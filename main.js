@@ -34,14 +34,16 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
   command = `curl -L '${source}' -o '${filePath}' --progress-bar`;
   exec(command);
 
-  console.log('[CRON]', CRON_SCHEDULE_TIME);
-  schedule(CRON_SCHEDULE_TIME, () => onAir(), {
-    timezone: 'Asia/Rangoon',
-  });
+//   console.log('[CRON]', CRON_SCHEDULE_TIME);
+//   schedule(CRON_SCHEDULE_TIME, () => onAir(), {
+//     timezone: 'Asia/Rangoon',
+//   });
 
-  generateReadme(auth, CRON_SCHEDULE_TIME);
-  updateVideo();
-  pushChanges();
+//   generateReadme(auth, CRON_SCHEDULE_TIME);
+//   updateVideo();
+//   pushChanges();
+  
+  setTimeout(() => onAir(), 2000);
 
   async function onAir() {
     now('ONAIR');
@@ -62,6 +64,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
       process.exit(1);
     }
   }
+  /* end of on air function */
 }().catch((err) => console.error('[ERROR]', err) | process.exit(1));
 
 function now(message) {
