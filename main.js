@@ -58,7 +58,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
       setTimeout(() => console.log('[EXIT]') | process.exit(0), 5000);
     } catch(e) {
-      console.error(e);
+      console.error(e.request.headers);
       process.exit(1);
     }
   }
