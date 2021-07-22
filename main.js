@@ -16,13 +16,13 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
   now('STARTED');
 
   const video = getVideo();
-  const id = video.link.split('/').pop();
+  const video_id = video.link.split('/').pop();
   const duration = video.length;
 
   const { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
   console.log('[AUTH]', auth);
 
-  const sources = await getFBVideo(id);
+  const sources = await getFBVideo(video_id);
   const { source, text } = sources.filter(source => !(source.text || '').includes('Audio')).pop();
 
   fileName = new URL(source).pathname.split('/').pop();
@@ -48,7 +48,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
     const description =  video.title || LIVE_STREAM_TITLE;
     const { id, stream_url } = await createLiveStream({
-      title: LIVE_STREAM_TITLE + ' ' + id,
+      title: LIVE_STREAM_TITLE + ' #' + video_id,
       description,
       access_token: FACEBOOK_PAGE_TOKEN,
     });
