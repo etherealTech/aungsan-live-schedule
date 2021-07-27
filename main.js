@@ -2,7 +2,6 @@ const { default: axios } = require('axios');
 const { schedule } = require ('node-cron');
 const { exec } = require('shelljs');
 const { getVideo, updateVideo, pushChanges } = require('./src/getVideoInfo');
-// const getFBVideo = require('./src/getFBVideo');
 const getFBVideoFromGraph = require('./src/getFBVideoFromGraph');
 const createLiveStream = require('./src/createLiveStream');
 const broadcastLiveStream = require('./src/broadcastLiveStream');
@@ -25,13 +24,11 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
   const { source, description, title } = await getFBVideoFromGraph({ id: video_id, access_token: FACEBOOK_PAGE_TOKEN });
   const text = description || title;
-  // const sources = await getFBVideo(video_id);
-  // const { source, text } = sources.filter(source => !(source.text || '').includes('Audio')).pop();
 
   fileName = new URL(source).pathname.split('/').pop();
   filePath = `${__dirname}/tmp/${fileName}`;
 
-  console.log('<<<', text);
+  console.log('<<<', source);
   console.log('>>>', filePath);
 
   command = `curl -L '${source}' -o '${filePath}' --progress-bar`;
@@ -52,7 +49,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
       const description =  video.title || LIVE_STREAM_TITLE;
       const { id, stream_url } = await createLiveStream({
         title: LIVE_STREAM_TITLE + ' #' + video_id,
-        description,
+        description: text,
         access_token: FACEBOOK_PAGE_TOKEN,
       });
 
