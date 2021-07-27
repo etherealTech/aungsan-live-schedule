@@ -2,7 +2,8 @@ const { default: axios } = require('axios');
 const { schedule } = require ('node-cron');
 const { exec } = require('shelljs');
 const { getVideo, updateVideo, pushChanges } = require('./src/getVideoInfo');
-const getFBVideo = require('./src/getFBVideo');
+// const getFBVideo = require('./src/getFBVideo');
+const getFBVideoFromGraph = require('./src/getFBVideoFromGraph');
 const createLiveStream = require('./src/createLiveStream');
 const broadcastLiveStream = require('./src/broadcastLiveStream');
 const generateReadme = require('./src/generateReadme');
@@ -22,19 +23,21 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
   const { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
   console.log('[AUTH]', auth);
 
-  const sources = await getFBVideo(video_id);
-  const { source, text } = sources.filter(source => !(source.text || '').includes('Audio')).pop();
+  const { source, description, title } = await getFBVideoFromGraph({ id: video_id, access_token: FACEBOOK_PAGE_TOKEN });
+  const text = description || title;
+  // const sources = await getFBVideo(video_id);
+  // const { source, text } = sources.filter(source => !(source.text || '').includes('Audio')).pop();
 
   fileName = new URL(source).pathname.split('/').pop();
   filePath = `${__dirname}/tmp/${fileName}`;
 
-  console.log('[INPUT]', text);
-  console.log('[DOWNLOADING]', filePath);
+  console.log('<<<', text);
+  console.log('>>>', filePath);
 
   command = `curl -L '${source}' -o '${filePath}' --progress-bar`;
   exec(command);
 
-  console.log('[CRON]', CRON_SCHEDULE_TIME);
+  console.log('[CRON:SCHEDULE]', CRON_SCHEDULE_TIME);
   schedule(CRON_SCHEDULE_TIME, () => onAir(), {
     timezone: 'Asia/Rangoon',
   });
