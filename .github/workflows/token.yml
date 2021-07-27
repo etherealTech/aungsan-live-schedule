@@ -10,6 +10,6 @@ jobs:
        with:
          node-version: 14.16.0
      - run: npm install
-     - run: node test.js '${{ secrets.FACEBOOK_TEST_TOKEN }}'
+     - run: node test.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}' '${{ secrets.FACEBOOK_TEST_TOKEN }}'
  
 
