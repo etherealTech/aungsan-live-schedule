@@ -1,9 +1,77 @@
-const DATETIME_OPTIONS = ['en-US', { timeZone: 'Asia/Yangon' }]; 
+const { default: axios } = require('axios');
+const { schedule } = require ('node-cron');
+const { exec } = require('shelljs');
+const { getVideo, updateVideo, pushChanges } = require('./src/getVideoInfo');
+// const getFBVideo = require('./src/getFBVideo');
+const getFBVideoFromGraph = require('./src/getFBVideoFromGraph');
+const createLiveStream = require('./src/createLiveStream');
+const broadcastLiveStream = require('./src/broadcastLiveStream');
+const generateReadme = require('./src/generateReadme');
 
-!function() {
-  let ld = new Date().toLocaleDateString(...DATETIME_OPTIONS);
-  ld = ld.split('/');
-  ld = [ld[2], ld[0].length === 2 ? ld[0] : '0' + ld[0], ld[1]].join('-');
-  let dt = new Date(`${ld} 19:00:00 GMT+6:30`);
-  console.log(dt);
-}();
+const LIVE_STREAM_TITLE = 'တရားတော်';
+const CRON_SCHEDULE_TIME = process.argv[3];
+const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
+
+!async function () {
+  let filePath, fileName, command;
+  now('STARTED');
+
+  const video = getVideo();
+  const video_id = video.link.split('/').pop();
+  const duration = video.length;
+
+  const { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
+  console.log('[AUTH]', auth);
+
+  const { source, description, title } = await getFBVideoFromGraph({ id: video_id, access_token: FACEBOOK_PAGE_TOKEN });
+  const text = description || title;
+  // const sources = await getFBVideo(video_id);
+  // const { source, text } = sources.filter(source => !(source.text || '').includes('Audio')).pop();
+
+  fileName = new URL(source).pathname.split('/').pop();
+  filePath = `${__dirname}/tmp/${fileName}`;
+
+  console.log('<<<', text);
+  console.log('>>>', filePath);
+
+  command = `curl -L '${source}' -o '${filePath}' --progress-bar`;
+  exec(command);
+
+  console.log('[CRON:SCHEDULE]', CRON_SCHEDULE_TIME);
+  schedule(CRON_SCHEDULE_TIME, () => onAir(), {
+    timezone: 'Asia/Rangoon',
+  });
+
+  generateReadme(auth, CRON_SCHEDULE_TIME);
+  updateVideo();
+  pushChanges();
+  
+  async function onAir() {
+    now('ONAIR');
+    try {
+      const description =  video.title || LIVE_STREAM_TITLE;
+      const { id, stream_url } = await createLiveStream({
+        title: LIVE_STREAM_TITLE + ' #' + video_id,
+        description,
+        access_token: FACEBOOK_PAGE_TOKEN,
+      });
+
+      command = broadcastLiveStream(filePath, stream_url);
+      exec(command);
+
+      setTimeout(() => console.log('[EXIT]') | process.exit(0), 5000);
+    } catch(e) {
+      console.error(e.request.headers);
+      process.exit(1);
+    }
+  }
+  /* end of on air function */
+}().catch((err) => console.error('[ERROR]', err) | process.exit(1));
+
+function now(message) {
+  let date = new Date();
+  let opt = {
+    timeZone: 'Asia/Yangon'
+  };
+  console.log('[' + message + ']', date.toLocaleString('en-US', opt));
+}
