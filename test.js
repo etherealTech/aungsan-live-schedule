@@ -1,5 +1,4 @@
 const { default: axios } = require('axios');
-const { schedule } = require ('node-cron');
 const { exec } = require('shelljs');
 const { getVideo, updateVideo, pushChanges } = require('./src/getVideoInfo');
 const getFBVideoFromGraph = require('./src/getFBVideoFromGraph');
@@ -33,9 +32,8 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_TEST_TOKEN;
   exec(command);
 
   console.log('[CRON:SCHEDULE]', CRON_SCHEDULE_TIME);
-  schedule(CRON_SCHEDULE_TIME, () => onAir(), {
-    timezone: 'Asia/Rangoon',
-  });
+  
+  setTimeout(() => onAir(), 3000);
   
   async function onAir() {
     now('ONAIR');
