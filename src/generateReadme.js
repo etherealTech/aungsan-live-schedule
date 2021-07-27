@@ -20,9 +20,9 @@ module.exports = function generateReadme(page, cron) {
   let markdown = [
     page.name ? `# [${page.name}](https://www.facebook.com/${page.id})` : '# aungsan-live-schedule',
     '',
-    `> generated at ${today.toLocaleString(...DATETIME_OPT)}`,
+    `> generated for ${today.toLocaleString(...DATETIME_OPT)}`,
     '',
-    '## Today\'s Selection',
+    '## Coming Up',
     '',
     '### ' + video.title + ' (`' + video.duration + '`)',
     '',
@@ -36,12 +36,8 @@ module.exports = function generateReadme(page, cron) {
     '|:-----:|:------|---------:|-------------:|',
     ...createUpcoming(),
     '',
-//    '## Previous Broadcast',
-//    '',
-//    '| Video | Title | Duration | Date |',
-//    '|:-----:|:------|---------:|-------------:|',
-//   ...createPrevious(),
-//    '',
+    '---',
+    '',
     '_&copy; 2021-' + new Date().getFullYear() + ' [Ethereal](https://github.com/etherealtech)_',
   ];
   
@@ -73,18 +69,6 @@ module.exports = function generateReadme(page, cron) {
       items.push(item);
     }
     return items.slice(1);
-  }
-  
-  function createPrevious() {
-    let items = [];
-    let index = video.index < MAX_REVIEW_COUNT ? 0 : video.index - MAX_REVIEW_COUNT;
-    let data = readData().slice(0, video.index - 1);
-    for (let i in data) {
-      let { title, duration, image, link } = data[i];
-      let item = `| ![${id}](${image}) | [${title}](${link}) | ${duration} | ${new Date(Date.now() - ((i + 1) * PER_DAY_VALUE)).toLocaleDateString(...DATETIME_OPT)} |`;
-      items.push(item);
-    }
-    return items;
   }
 };
 
