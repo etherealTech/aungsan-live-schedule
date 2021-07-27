@@ -7,7 +7,8 @@ const broadcastLiveStream = require('./src/broadcastLiveStream');
 const generateReadme = require('./src/generateReadme');
 
 const LIVE_STREAM_TITLE = 'တရားတော်';
-const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_TEST_TOKEN;
+const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
+const FACEBOOK_TEST_TOKEN = process.argv[3] || process.env.FACEBOOK_TEST_TOKEN;
 
 !async function () {
   let filePath, fileName, command;
@@ -16,8 +17,11 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_TEST_TOKEN;
   const video = getVideo();
   const video_id = video.link.split('/').pop();
 
-  const { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
-  console.log('[AUTH] %s (https://www.facebook.com/%s)', auth.name, auth.id);
+  var { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
+  console.log('[AUTH:MAIN] %s (https://www.facebook.com/%s)', auth.name, auth.id);
+
+  var { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_TEST_TOKEN}`);
+  console.log('[AUTH:TEST] %s (https://www.facebook.com/%s)', auth.name, auth.id);
 
   const { source, description, title } = await getFBVideoFromGraph({ id: video_id, access_token: FACEBOOK_PAGE_TOKEN });
   const text = description || title;
@@ -25,13 +29,11 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_TEST_TOKEN;
   fileName = new URL(source).pathname.split('/').pop();
   filePath = `${__dirname}/tmp/${fileName}`;
 
-  console.log('<<<', source;
+  console.log('<<<', source);
   console.log('>>>', filePath);
 
   command = `curl -L '${source}' -o '${filePath}' --progress-bar`;
   exec(command);
-
-  console.log('[CRON:SCHEDULE]', CRON_SCHEDULE_TIME);
   
   setTimeout(() => onAir(), 3000);
   
@@ -42,7 +44,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_TEST_TOKEN;
       const { id, stream_url } = await createLiveStream({
         title: LIVE_STREAM_TITLE + ' #' + video_id,
         description: text,
-        access_token: FACEBOOK_PAGE_TOKEN,
+        access_token: FACEBOOK_TEST_TOKEN,
       });
 
       command = broadcastLiveStream(filePath, stream_url);
