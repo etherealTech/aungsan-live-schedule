@@ -24,7 +24,7 @@ module.exports = function generateReadme(page, cron) {
     '',
     '## Coming Up',
     '',
-    '### ' + video.title + ' (`' + video.duration + '`)',
+    '### ' + video.title + ' `' + video.duration + '`',
     '',
     'Original Link: [`#' + id +'`](' + video.link + ')',
     '',
@@ -42,7 +42,8 @@ module.exports = function generateReadme(page, cron) {
   writeFileSync(README_PATH, markdown.join('\n'), 'utf-8');
 
   function convertToDate() {
-    let [s, m, h ] = cron.split(' ');
+    if (!cron) return new Date().toLocaleString(...DATETIME_OPT);
+    let [s, m, h] = String(cron).split(' ');
     if (h.length === 1) {
       h = '0' + h;
     }
