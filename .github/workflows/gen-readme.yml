@@ -1,7 +1,7 @@
 name: Testing Cron
 on: 
   schedule:
-    - cron: '0/30 0/1 * * *'
+    - cron: '0/30 * * * *'
 jobs:
   task: 
     runs-on: ubuntu-latest
