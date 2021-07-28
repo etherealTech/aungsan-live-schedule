@@ -1,11 +1,6 @@
-name: Live Schedule
-
+name: Live Stream
 on:
   workflow_dispatch:
-    inputs:
-      cron_schedule:
-        required: true
-        default: '0 0 19 * * *'
 
 jobs:
   task:
@@ -17,5 +12,5 @@ jobs:
           node-version: 14.16.0
       - uses: FedericoCarboni/setup-ffmpeg@v1
       - run: npm install
-      - run: node main.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}' '${{ github.event.inputs.cron_schedule }}'
+      - run: node test.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}'
 
