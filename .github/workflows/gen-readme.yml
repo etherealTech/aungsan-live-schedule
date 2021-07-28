@@ -1,4 +1,4 @@
-name: Testing Cron
+name: Testing Cron (17:30MMT)
 on: 
   schedule:
     - cron: '0 11 * * *'
