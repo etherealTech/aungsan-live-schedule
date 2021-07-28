@@ -1,20 +1,19 @@
 # [ေအာင္ဆန္းေတာရတပ္ဦးေက်ာင္းတုုိက္](https://www.facebook.com/655653464834259)
 
-> generated for 7/27/2021, 7:00:00 PM
+> generated for 7/28/2021, 7:00:00 PM
 
 ## Coming Up
 
-### ဓမ္မရောင်ခြည်ဓမ္မဒါနဖေါင်ဒေးရှင်း(၁၆) နှစ်ပြည့်အထိမ်းအမှတ် အထူးတရားစခန်းပွဲ ၂၆.၅.၁၉ ပထမနေ့ည (`1:34:31`)
+### ၂၈.၅.၁၉ ဓမ္မရောင်ခြည်ဓမ္မဒါနဖောင်ဒေးရှင်း တရားစခန်းပွဲ တတိယနေ့ည အထူးတရားပွဲ (`1:44:14`)
 
-![thumbnail](https://scontent-sin6-4.xx.fbcdn.net/v/t15.5256-10/p235x350/60045681_364701284157830_7803232467548110848_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=YpCTHWMUBfMAX9NKrfN&_nc_ht=scontent-sin6-4.xx&oh=c5a38965610f9744a97cebf8aa1a625f&oe=60FA5C6D)
+![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p235x350/60512772_1273537036142485_6838793081580421120_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=d0bLdEW2uoEAX8ZAkuo&_nc_ht=scontent-sin6-2.xx&oh=fa5c023b6f1de54de25dcfeeb20cc2e3&oe=60FAF9A2)
 
-Original Link: [`#364643467496945`](https://www.facebook.com/655653464834259/videos/364643467496945)
+Original Link: [`#1273530889476433`](https://www.facebook.com/655653464834259/videos/1273530889476433)
 
 ## Upcoming
 
 | Video | Title | Duration | Date |
 |:-----:|:------|---------:|-------------:|
-| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p235x350/60512772_1273537036142485_6838793081580421120_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=d0bLdEW2uoEAX8ZAkuo&_nc_ht=scontent-sin6-2.xx&oh=fa5c023b6f1de54de25dcfeeb20cc2e3&oe=60FAF9A2) | `#1273530889476433` [၂၈.၅.၁၉ ဓမ္မရောင်ခြည်ဓမ္မဒါနဖောင်ဒေးရှင်း တရားစခန်းပွဲ တတိယနေ့ည အထူးတရားပွဲ](https://www.facebook.com/655653464834259/videos/1273530889476433) | 1:44:14 | 7/28/2021, 7:00:00 PM |
 | ![thumbnail](https://scontent-sin6-3.xx.fbcdn.net/v/t15.5256-10/p235x350/60472747_2027501040695561_5804747995324874752_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=H8COiA_cBe8AX_nN9HT&_nc_ht=scontent-sin6-3.xx&oh=04012cc98d411ed6d46168618737765b&oe=60FA5342) | `#2027327040712961` [၂၉.၅.၁၉ ဓမ္မရောင်ခြည်ဓမ္မဒါနဖောင်ဒေးရှင်း တရားစခန်းပွဲ စတုတ္ထနေ့ည အထူးတရားပွဲ](https://www.facebook.com/655653464834259/videos/2027327040712961) | 1:46:31 | 7/29/2021, 7:00:00 PM |
 | ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/p235x350/60917468_366941894027425_4442889650461212672_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=_G6QVkp2zGAAX9JEQdY&_nc_ht=scontent-sin6-2.xx&oh=05d39b064f68f8c9ccee4cf208937b14&oe=60FB5411) | `#366933884028226` [၃၀.၅.၁၉ ဓမ္မရောင်ခြည်ဓမ္မဒါနဖောင်ဒေးရှင်း တရားစခန်းပွဲ ပဥ္စမနေ့ည အထူးတရားပွဲ](https://www.facebook.com/655653464834259/videos/366933884028226) | 2:06:07 | 7/30/2021, 7:00:00 PM |
 | ![thumbnail](https://scontent-sin6-1.xx.fbcdn.net/v/t15.5256-10/p235x350/60788341_833129220403829_3776958351355674624_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=apTWN0ZEeGgAX9203W1&_nc_ht=scontent-sin6-1.xx&oh=53ad134909999a8795036ad5979b253d&oe=60FAEFE2) | `#833106997072718` [၃၁.၅.၁၉ ဓမ္မရောင်ခြည်ဓမ္မဒါနဖောင်ဒေးရှင်း တရားစခန်းပွဲ ဆဋ္ဌမနေ့ည အထူးတရားပွဲ](https://www.facebook.com/655653464834259/videos/833106997072718) | 50:42 | 7/31/2021, 7:00:00 PM |
@@ -28,6 +27,7 @@ Original Link: [`#364643467496945`](https://www.facebook.com/655653464834259/vid
 | ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/64819232_421519921766286_1255665360074440704_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=XtXuM_5bXgIAX94D4AS&_nc_ht=scontent-sin6-2.xx&oh=8988888df97e22db9386eb5bd4c6259e&oe=60FAEECC) | `#421515848433360` [၄.၁၂.၂၀၁၃ အောင်ဆန်းတောရတပ်ဦးကျောင်းတိုက်ကြီးတွင် ဒီဇင်ဘာအထူးတရားစခန်းပွဲ၌ ဟောကြားတော်မူသော ပါရမီ ပြည့်စုံလုံလောက်လို့ တရားအားထုတ်နိုင်ကြသည် တရားတော်](https://www.facebook.com/655653464834259/videos/421515848433360) | 1:08:51 | 8/8/2021, 7:00:00 PM |
 | ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/64556816_1237913589711873_6431392485544558592_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=4TU7D_fMfEEAX8bnBD7&_nc_ht=scontent-sin6-2.xx&oh=080a0e28204a63251a495015df6c1c27&oe=60FA7A39) | `#1237876136382285` [၄.၁၂.၂၀၁၃ ညနေ အောင်ဆန်းတောရတပ်ဦးကျောင်းတိုက်ကြီး၌ ဒီဇင်ဘာအထူးတရားစခန်းပွဲတွင်ဟောကြားတော်မူသော ဝိပဿနာမလုပ်မီခန္ဓာအကြာင်းကျိုးဆက်သင်ရမည် တရားတော်](https://www.facebook.com/655653464834259/videos/1237876136382285) | 1:14:16 | 8/9/2021, 7:00:00 PM |
 | ![thumbnail](https://scontent-sin6-1.xx.fbcdn.net/v/t15.5256-10/64707802_316039776012119_711910337053458432_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=JZPwF3rGB44AX-uLj71&_nc_ht=scontent-sin6-1.xx&oh=d8ee911b06e909af8763734ff75b9eb9&oe=60FA2922) | `#316030289346401` [၅.၁၂.၂၀၁၃ နံနက် အောင်ဆန်းတောရတပ်ဦးကျောင်းတိုက်ကြီး၌ ( ၉ ) ကြိမ်မြောက် ဒီဇင်ဘာအထူးတရားစခန်းပွဲတွင်ဟောကြားတော်မူသော အမှားအမှန် ခွဲခြားမြင်ရန် ပဋိစ္စသမုပ္ပါဒ်သင်ယူပါ တရားတော်](https://www.facebook.com/655653464834259/videos/316030289346401) | 1:04:22 | 8/10/2021, 7:00:00 PM |
+| ![thumbnail](https://scontent-sin6-2.xx.fbcdn.net/v/t15.5256-10/65440508_626304771216404_9155859325669867520_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=ad6a45&_nc_ohc=VjXqQXoh34IAX9giSpj&_nc_ht=scontent-sin6-2.xx&oh=5b7e3015f03207006cbe816692628341&oe=60FABC92) | `#626299741216907` [၆.၁၂.၂၀၁၃ နံနက် အောင်ဆန်းတောရတပ်ဦးကျောင်းတိုက်ကြီး၌ ( ၉ ) ကြိမ်မြောက် ဒီဇင်ဘာအထူးတရားစခန်းပွဲတွင်ဟောကြားတော်မူသော အမိုက်ဇာတ်တွေသိမ်းကြပါ တရားတော်](https://www.facebook.com/655653464834259/videos/626299741216907) | 52:57 | 8/11/2021, 7:00:00 PM |
 
 ---
 
