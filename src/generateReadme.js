@@ -26,13 +26,11 @@ module.exports = function generateReadme(page, cron) {
     '',
     '### ' + video.title + ' (`' + video.duration + '`)',
     '',
-    '![thumbnail](' + video.image + ')',
-    '',
     'Original Link: [`#' + id +'`](' + video.link + ')',
     '',
     '## Upcoming',
     '',
-    '| Video | Title | Duration | Date |',
+    '| # | Title | Duration | Date |',
     '|:-----:|:------|---------:|-------------:|',
     ...createUpcoming(),
     '',
@@ -64,8 +62,12 @@ module.exports = function generateReadme(page, cron) {
       let { title, duration, image, link } = data[i];
       let id = link.split('/').pop();
       title = title.replace(/\|/gm, '-');
-      let date = new Date(today.getTime() + i * PER_DAY_VALUE);
-      let item = `| ![thumbnail](${image}) | \`#${id}\` [${title}](${link}) | ${duration} | ${date.toLocaleString(...DATETIME_OPT)} |`;
+      let date = new Date(today.getTime() + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT);
+      let time = new Date(today.getTime() + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT);
+      let [m, d, y] = date.split('/');
+      time = time.spilt(':').join(':');
+      let day = time.pop().split(' ').pop();
+      let item = `| \`#${id}\` | [${title}](${link}) | ${duration} | ${d}.${m}.${y} ${time}${day}|`;
       items.push(item);
     }
     return items.slice(1);
