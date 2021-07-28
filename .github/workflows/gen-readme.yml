@@ -1,4 +1,4 @@
-name: Testing Cron (17:30MMT)
+name: Live Schedule [Beta]
 on: 
   schedule:
     - cron: '0 11 * * *'
@@ -10,4 +10,7 @@ jobs:
      - uses: actions/setup-node@v2
        with:
          node-version: 14.16.0
-     - run: node -e 'console.log(Date.now(), new Date().toLocaleString("en-US",{timeZone:"Asia/Yangon"}))'
+     - run: |
+         echo "[BETA] Schedule for Live Stream at 7PM on every 5:30 PM (Myanmar Standard Time)."
+         npm install
+         node main.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}' '0 0 19 * * *'
