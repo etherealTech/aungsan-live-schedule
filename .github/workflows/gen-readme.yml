@@ -1,6 +1,8 @@
-name: Generate README
+name: Auto Generate README.md
 
 on: 
+  schedule:
+    - cron: '0 0/4 * * *'
   workflow_dispatch:
     inputs:
       cron_schedule:
