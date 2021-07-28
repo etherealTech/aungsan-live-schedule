@@ -11,64 +11,51 @@ const LIVE_STREAM_TITLE = 'တရားတော်';
 const CRON_SCHEDULE_TIME = process.argv[3];
 const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
 
-!async function () {
-  let filePath, fileName, command;
-  now('STARTED');
+!async function () { 
+  now(':INIT');
 
   const video = getVideo();
   const video_id = video.link.split('/').pop();
-  const duration = video.length;
 
   const { data: auth } = await axios.get(`https://graph.facebook.com/v10.0/me?access_token=${FACEBOOK_PAGE_TOKEN}`);
-  console.log('[AUTH]', auth);
-
   const { source, description, title } = await getFBVideoFromGraph({ id: video_id, access_token: FACEBOOK_PAGE_TOKEN });
   const text = description || title;
 
-  fileName = new URL(source).pathname.split('/').pop();
-  filePath = `${__dirname}/tmp/${fileName}`;
+  const fileName = new URL(source).pathname.split('/').pop();
+  const filePath = `${__dirname}/tmp/${fileName}`;
 
-  console.log('<<<', source);
-  console.log('>>>', filePath);
+  exec(`wget '${source}' -O '${filePath}'`);
 
-  command = `curl -L '${source}' -o '${filePath}' --progress-bar`;
-  exec(command);
-
-  console.log('[CRON:SCHEDULE]', CRON_SCHEDULE_TIME);
-  schedule(CRON_SCHEDULE_TIME, () => onAir(), {
-    timezone: 'Asia/Rangoon',
-  });
+  now(':READY');
 
   generateReadme(auth, CRON_SCHEDULE_TIME);
   updateVideo();
   pushChanges();
-  
-  async function onAir() {
-    now('ONAIR');
+
+  schedule(CRON_SCHEDULE_TIME, async () {
+    now(':ONAIR');
     try {
-      const description =  video.title || LIVE_STREAM_TITLE;
       const { id, stream_url } = await createLiveStream({
         title: LIVE_STREAM_TITLE + ' #' + video_id,
         description: text,
         access_token: FACEBOOK_PAGE_TOKEN,
       });
-
-      command = broadcastLiveStream(filePath, stream_url);
-      exec(command);
-
-      setTimeout(() => console.log('[EXIT]') | process.exit(0), 5000);
+      exec(broadcastLiveStream(filePath, stream_url));
+      setTimeout(() => process.exit(0), 3000);
     } catch(e) {
-      console.error(e.request.headers);
+      console.error(e.request?.headers || e.message);
       process.exit(1);
     }
-  }
-  /* end of on air function */
-}().catch((err) => console.error('[ERROR]', err) | process.exit(1));
+  }, {
+    timezone: 'Asia/Rangoon',
+  });
+}().catch((err) => {
+  console.error('[ERROR]', err);
+  process.exit(1);
+});
 
 function now(message) {
-  let date = new Date();
-  let opt = {
+  console.log('[' + message + ']', new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Yangon'
-  };
-  console.log('[' + message + ']', date.toLocaleString('en-US', opt));
+  }));
 }
