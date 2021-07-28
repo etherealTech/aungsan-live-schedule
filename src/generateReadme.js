@@ -62,8 +62,8 @@ module.exports = function generateReadme(page, cron) {
       let { title, duration, image, link } = data[i];
       let id = link.split('/').pop();
       title = title.replace(/\|/gm, '-');
-      let [DD, MM, YY] = new Date(today.getTime() + i * PER_DAY_VALUE).toLocaleDateString(...DATETIME_OPT).split('/');
-      let time = new Date(today.getTime() + i * PER_DAY_VALUE).toLocaleTimeString(...DATETIME_OPT).spilt(':');
+      let [DD, MM, YY] = String(new Date(today.getTime() + i * PER_DAY_VALUE)).toLocaleDateString(...DATETIME_OPT).split('/');
+      let time = String(new Date(today.getTime() + i * PER_DAY_VALUE).toLocaleTimeString(...DATETIME_OPT)).spilt(':');
       let day = time.pop().split(' ').pop();
       let item = `| \`#${id}\` | [${title}](${link}) | ${duration} | ${DD}.${MM}.${YY} ${time.join(':')}${day}|`;
       items.push(item);
