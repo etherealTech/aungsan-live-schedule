@@ -5,7 +5,7 @@ const { readDB, readData, getVideo } = require('./getVideoInfo.js');
 const MAX_REVIEW_COUNT = 14;
 const README_PATH = resolve(__dirname, '../README.md');
 const DATETIME_OPT = ['en-US', { timeZone: 'Asia/Yangon' }];
-const PER_DAY_VALUE = 24 * 3600 * 1000; // hour * minute * millisecond
+const PER_DAY_VALUE = 24 * 3600 * 1000;
 
 module.exports = function generateReadme(page, cron) {
   let time = convertToDate();
@@ -42,8 +42,7 @@ module.exports = function generateReadme(page, cron) {
   writeFileSync(README_PATH, markdown.join('\n'), 'utf-8');
 
   function convertToDate() {
-    if (!cron) return new Date().toLocaleString(...DATETIME_OPT);
-    let [s, m, h] = String(cron).split(' ');
+    let [s, m, h] = cron.split(' ');
     if (h.length === 1) {
       h = '0' + h;
     }
