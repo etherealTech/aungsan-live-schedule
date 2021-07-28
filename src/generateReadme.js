@@ -42,7 +42,7 @@ module.exports = function generateReadme(page, cron) {
   writeFileSync(README_PATH, markdown.join('\n'), 'utf-8');
 
   function convertToDate() {
-    let [s, m, h] = cron.split(' ');
+    let [s, m, h] = String(cron).split(' ');
     if (h.length === 1) {
       h = '0' + h;
     }
@@ -61,11 +61,9 @@ module.exports = function generateReadme(page, cron) {
     for (let i in data) {
       let { title, duration, image, link } = data[i];
       let id = link.split('/').pop();
+      let now = new Date(today.getTime() + i * PER_DAY_VALUE);
       title = title.replace(/\|/gm, '-');
-      let [DD, MM, YY] = String(new Date(today.getTime() + i * PER_DAY_VALUE)).toLocaleDateString(...DATETIME_OPT).split('/');
-      let time = String(new Date(today.getTime() + i * PER_DAY_VALUE).toLocaleTimeString(...DATETIME_OPT)).spilt(':');
-      let day = time.pop().split(' ').pop();
-      let item = `| \`#${id}\` | [${title}](${link}) | ${duration} | ${DD}.${MM}.${YY} ${time.join(':')}${day}|`;
+      let item = `| \`#${id}\` | [${title}](${link}) | ${duration} | ${now.toLocaleDateString(... DATETIME_OPT)} ${time} |`;
       items.push(item);
     }
     return items.slice(1);
