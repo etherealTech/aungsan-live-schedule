@@ -32,7 +32,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
   updateVideo();
   pushChanges();
 
-  schedule(CRON_SCHEDULE_TIME, async () => {
+  //schedule(CRON_SCHEDULE_TIME, async () => {
     now(':ONAIR');
     try {
       const { id, stream_url } = await createLiveStream({
@@ -46,9 +46,7 @@ const FACEBOOK_PAGE_TOKEN = process.argv[2] || process.env.FACEBOOK_PAGE_TOKEN;
       console.error(e.request?.headers || e.message);
       process.exit(1);
     }
-  }, {
-    timezone: 'Asia/Rangoon',
-  });
+  /* }, { timezone: 'Asia/Rangoon' }); */
 }().catch((err) => {
   console.error('[ERROR]', err);
   process.exit(1);
