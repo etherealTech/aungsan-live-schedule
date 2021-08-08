@@ -1,4 +1,4 @@
-name: Live Stream
+name: Live Schedule (Morning)
 on:
   workflow_dispatch:
 
@@ -12,4 +12,4 @@ jobs:
           node-version: 14.16.0
       - uses: FedericoCarboni/setup-ffmpeg@v1
       - run: npm install
-      - run: node morning.js '${{ secrets.FACEBOOK_TEST_TOKEN }}' '0 0 6 * * *'
+      - run: node pahtan.js '${{ secrets.FACEBOOK_TEST_TOKEN }}' '0 0 6 * * *'
