@@ -1,0 +1,15 @@
+name: Live Stream
+on:
+  workflow_dispatch:
+
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.16.0
+      - uses: FedericoCarboni/setup-ffmpeg@v1
+      - run: npm install
+      - run: node morning.js '${{ secrets.FACEBOOK_TEST_TOKEN }}' '0 0 6 * * *'
