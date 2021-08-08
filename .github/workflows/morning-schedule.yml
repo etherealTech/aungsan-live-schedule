@@ -1,7 +1,6 @@
 name: Live Schedule (Morning)
 on:
-  schedule:
-    - cron: '30 20 * * *'
+  dispatch_workflow:
 jobs:
   task:
     runs-on: ubuntu-latest
