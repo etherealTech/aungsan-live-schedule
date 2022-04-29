@@ -26,7 +26,11 @@ function getVideo() {
   let videos = readData();
   let video = videos[index];
   if (video === undefined) {
-    throw new Error('Undefined index [' + index + '] in variable $videos');
+    index = 0;
+    video = video[index];
+    console.log('video:reset-playlist');
+  } else {
+    console.log('video:next-playlist');
   }
   video.index = index;
   return video;
