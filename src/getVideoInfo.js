@@ -27,7 +27,7 @@ function getVideo() {
   let video = videos[index];
   if (video === undefined) {
     index = 0;
-    video = video[index];
+    video = videos[index];
     console.log('video:reset-playlist');
   } else {
     console.log('video:next-playlist');
