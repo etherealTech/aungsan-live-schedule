@@ -19,7 +19,7 @@
   "homepage": "https://github.com/etherealTech/aungsan-live-schedule#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "node-cron": "^3.0.0",
+    "node-cron": "^3.0.1",
     "download": "^8.0.0",
     "isomorphic-fetch": "^3.0.0",
     "jsdom": "^16.6.0",
