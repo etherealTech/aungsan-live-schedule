@@ -13,4 +13,3 @@ jobs:
      - uses: FedericoCarboni/setup-ffmpeg@v1
      - run: npm install
      - run: node main.js '${{ secrets.FACEBOOK_PAGE_TOKEN }}' '0 0 18 * * *'
-     # just update
